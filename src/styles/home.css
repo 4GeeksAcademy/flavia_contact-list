@@ -1,0 +1,7 @@
+.buttonAddContainer{
+    display: flex;
+    justify-content: end;
+}
+.contactContainer{
+    display: inline-flex;
+}

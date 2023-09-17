@@ -1,0 +1,13 @@
+.titleAdd {
+    text-align: center;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+.submitButton{
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
