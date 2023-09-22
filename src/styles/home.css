@@ -1,7 +1,12 @@
-.buttonAddContainer{
-    display: flex;
-    justify-content: end;
+.buttonAddContainer {
+  display: flex;
+  justify-content: end;
 }
-.contactContainer{
-    display: inline-flex;
+.contactContainer {
+  display: inline-flex;
+}
+img {
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
 }

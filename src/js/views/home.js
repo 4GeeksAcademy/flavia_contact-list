@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/home.css";
+import { Context } from "../store/appContext";
 
-export const Home = () => (
-  <div className="container">
-    <div className="buttonAddContainer">
-      <button>Add new contact</button>
-    </div>
-    <div className="listContainer">
+export const Home = () => {
+  const { store, actions } = useContext(Context);
+
+  return (
+    <div className="container">
       <div className="contactContainer">
-        <div className="photo">foto</div>
-        <div className="data">datos</div>
-        <div className="buttons">botones</div>
+        <div className="data">
+          {store.contacts.map((contact, index) => {
+            return (
+              <>
+                <li key={index}>
+                  <img src={contact.address} />
+                  {contact.full_name}, {contact.email}, {contact.phone}
+                </li>
+                <button onClick={() => actions.deleteContact(contact.id)}>
+                  Eliminar
+                </button>
+                <br />
+              </>
+            );
+          })}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
