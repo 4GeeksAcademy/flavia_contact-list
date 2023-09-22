@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -19,6 +20,12 @@ export const Home = () => {
                 <button onClick={() => actions.deleteContact(contact.id)}>
                   Eliminar
                 </button>
+                <Link
+                  to={`/single/${contact.id}`}
+                
+                >
+                  Ir al perfil
+                </Link>
                 <br />
               </>
             );

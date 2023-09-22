@@ -41,6 +41,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .catch((err) => console.log(err));
       },
+      particularContact: async (id) => {
+        try {
+          const response = await fetch(
+            `https://playground.4geeks.com/apis/fake/contact/${id}`
+          );
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.log(error);
+        }
+      },
     },
   };
 };
