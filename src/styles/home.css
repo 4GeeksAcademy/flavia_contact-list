@@ -1,12 +1,61 @@
-.buttonAddContainer {
-  display: flex;
-  justify-content: end;
+body {
+  background-image: url("https://images.unsplash.com/photo-1601979689063-cb474664e70b?ixlib=rb-4.0.3");
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  height: 420px;
+  overflow-y: auto;
+  background-color: transparent;
 }
 .contactContainer {
-  display: inline-flex;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
 }
 img {
   object-fit: cover;
-  width: 230px;
-  height: 230px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.infoContainer {
+  border-radius: 20px;
+  width: 30rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.676);
+}
+.imgContainer {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin-top: -60px;
+}
+
+.nameContainer {
+  height: 20%;
+  font-family: "Inconsolata", monospace;
+  font-size: 2rem;
+  color: rgb(67, 83, 52);
+}
+
+.buttonsContainer {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.icon,
+.fa-regular {
+  border: none;
+  color: rgb(130, 148, 96);
+  background: transparent;
+  font-size: 1.5rem;
 }
