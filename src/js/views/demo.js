@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
 export const Demo = () => {
-  const { store, actions } = useContext(Context);
+  const { actions } = useContext(Context);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

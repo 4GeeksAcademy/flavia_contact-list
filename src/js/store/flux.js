@@ -52,6 +52,24 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log(error);
         }
       },
+      updateContact: (id, name, email, urlphoto, phone) => {
+        fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            address: urlphoto,
+            agenda_slug: "Flavia",
+            email: email,
+            full_name: name,
+            phone: phone,
+          }),
+        })
+          .then(response => response.json())
+          .then(()=> {getActions().fetchContacts()})
+          .catch(err => console.log(err));
+      },
     },
   };
 };
