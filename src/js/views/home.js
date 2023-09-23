@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
+  const sendEmail = (email) => {
+    window.location.href = `mailto:${email}`;
+  };
+
+  const callPhoneNumber = (phoneNumber) => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   return (
     <div className="container">
       <div className="contactContainer">
@@ -20,12 +28,13 @@ export const Home = () => {
                 <button onClick={() => actions.deleteContact(contact.id)}>
                   Eliminar
                 </button>
-                <Link
-                  to={`/single/${contact.id}`}
-                
-                >
-                  Ir al perfil
-                </Link>
+                <Link to={`/single/${contact.id}`}>Ir al perfil</Link>
+                <button onClick={() => sendEmail(contact.email)}>
+                  Enviar Correo
+                </button>
+                <button onClick={() => callPhoneNumber(contact.phone)}>
+                  Llamar
+                </button>
                 <br />
               </>
             );
