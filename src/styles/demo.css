@@ -3,7 +3,9 @@
   width: 30rem;
   border-radius: 20px;
   background-color: rgba(245, 245, 245, 0.84);
+  margin: auto;
 }
+
 .titleAdd {
   text-align: center;
   color: rgb(26, 93, 26);
