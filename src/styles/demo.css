@@ -1,13 +1,45 @@
+.theContainer {
+  height: 25rem;
+  width: 30rem;
+  border-radius: 20px;
+  background-color: rgba(245, 245, 245, 0.84);
+}
 .titleAdd {
-    text-align: center;
+  text-align: center;
+  color: rgb(26, 93, 26);
+  padding-top: 0.75rem;
 }
-.formContainer{
-    display: flex;
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.submitButton{
-    border: none;
-    border-radius: 10px;
-    background-color: blue;
-    color: white;
+.formContainer input {
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+}
+.formContainer label {
+  margin-top: 0.5rem;
+}
+.formContainer {
+  color: rgb(97, 130, 100);
+}
+.submitButton {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(122, 157, 84);
+  color: white;
+  width: 20%;
+  align-self: center;
+}
+.backContacts {
+  color: rgb(122, 157, 84);
+  text-decoration: none;
+  align-self: center;
+  margin-top: 1rem;
+}
+.backContacts:hover {
+  color: rgb(97, 130, 100);
 }

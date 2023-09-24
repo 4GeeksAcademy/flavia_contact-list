@@ -66,9 +66,12 @@ const getState = ({ getStore, getActions, setStore }) => {
             phone: phone,
           }),
         })
-          .then(response => response.json())
-          .then(()=> {getActions().fetchContacts()})
-          .catch(err => console.log(err));
+          .then((response) => response.json())
+          .then(() => {
+            getActions().fetchContacts();
+            window.location.reload();
+          })
+          .catch((err) => console.log(err));
       },
     },
   };

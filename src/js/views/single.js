@@ -29,37 +29,72 @@ export const Single = () => {
   return (
     <>
       {editButton ? (
-        <>
-          <h1>Editar información</h1>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <input
-            type="text"
-            value={urlphoto}
-            onChange={(e) => setUrlphoto(e.target.value)}
-          ></input>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <input
-            type="number"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          ></input>
-          <Link
-            to="/"
-            onClick={() =>
-              actions.updateContact(myContact.id, name, email, urlphoto, phone)
-            }
-          >
-            Guardar
+        <div className="singleContainer">
+          <div className="cardContainer">
+            <div className="row1">
+              <div className="col1">
+                <img src={myContact.address} className="imgProfile" />
+              </div>
+              <div className="col2">
+                <h1>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="editInput"
+                    style={{ width: "90%" }}
+                  ></input>
+                </h1>
+                <p>
+                  <i class="fa-solid fa-at"></i>
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="editInput"
+                  ></input>
+                </p>
+                <p>
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  <input
+                    type="number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="editInput"
+                  ></input>
+                </p>
+                <p>
+                  <i class="fa-solid fa-image"></i>
+                  <input
+                    type="text"
+                    value={urlphoto}
+                    onChange={(e) => setUrlphoto(e.target.value)}
+                    className="editInput"
+                  ></input>
+                </p>
+              </div>
+            </div>
+            <div className="row2">
+              <button
+                onClick={() => {
+                  actions.updateContact(
+                    myContact.id,
+                    name,
+                    email,
+                    urlphoto,
+                    phone
+                  );
+                }}
+                className="editButton"
+              >
+                Guardar
+              </button>
+            </div>
+          </div>
+          <Link onClick={() => window.location.reload()} className="backHome">
+            <i class="fa-solid fa-circle-chevron-left"></i> Back to Profile
           </Link>
-        </>
+        </div>
       ) : (
         <div className="singleContainer">
           <div className="cardContainer">
@@ -69,8 +104,13 @@ export const Single = () => {
               </div>
               <div className="col2">
                 <h1>{myContact.full_name}</h1>
-                <p>Email: {myContact.email}</p>
-                <p>Phone: {myContact.phone}</p>
+                <p>
+                  <i class="fa-solid fa-at"></i> {myContact.email}
+                </p>
+                <p>
+                  <i class="fa-solid fa-mobile-screen-button"></i>{" "}
+                  {myContact.phone}
+                </p>
               </div>
             </div>
             <div className="row2">

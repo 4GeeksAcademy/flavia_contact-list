@@ -13,37 +13,33 @@ export const Demo = () => {
   const [urlphoto, setUrlphoto] = useState("");
 
   return (
-    <div className="container">
+    <div className="theContainer">
       <div className="titleAdd">
-        <h1>Add a new contact</h1>
+        <h4>Add a new contact</h4>
       </div>
-      <div>
-        <form className="formContainer">
+      <div className="formContainer">
+        <form>
           <label>Full Name</label>
           <input
             type="text"
-            placeholder="Full Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></input>
           <label>Email</label>
           <input
             type="text"
-            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <label>Phone</label>
           <input
             type="number"
-            placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           ></input>
           <label>URL Photo</label>
           <input
             type="text"
-            placeholder="URL Photo"
             value={urlphoto}
             onChange={(e) => setUrlphoto(e.target.value)}
           ></input>
@@ -53,12 +49,14 @@ export const Demo = () => {
             className="submitButton"
             onClick={() => actions.addContact(name, email, urlphoto, phone)}
           >
-            save
+            Save
           </button>
+          <Link to="/" className="backContacts">
+            {" "}
+            <i class="fa-solid fa-circle-chevron-left"></i> Back to Contacts
+          </Link>
         </form>
       </div>
-      <br />
-      <Link to="/">or get back to contact list</Link>
     </div>
   );
 };
