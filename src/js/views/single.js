@@ -89,11 +89,14 @@ export const Single = () => {
               >
                 Guardar
               </button>
+              <Link
+                onClick={() => window.location.reload()}
+                className="backHome"
+              >
+                <i class="fa-solid fa-circle-chevron-left"></i> Back to Profile
+              </Link>
             </div>
           </div>
-          <Link onClick={() => window.location.reload()} className="backHome">
-            <i class="fa-solid fa-circle-chevron-left"></i> Back to Profile
-          </Link>
         </div>
       ) : (
         <div className="singleContainer">
@@ -120,11 +123,11 @@ export const Single = () => {
               >
                 Editar
               </button>
+              <Link to="/" className="backHome">
+                <i class="fa-solid fa-circle-chevron-left"></i> Back to Contacts
+              </Link>
             </div>
           </div>
-          <Link to="/" className="backHome">
-            <i class="fa-solid fa-circle-chevron-left"></i> Back to Contacts
-          </Link>
         </div>
       )}
     </>
