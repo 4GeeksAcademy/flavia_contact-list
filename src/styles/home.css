@@ -4,7 +4,7 @@ body {
   background-position: center;
 }
 .container {
-  height: 420px;
+  height: 25.25rem;
   overflow-y: auto;
   background-color: transparent;
 }
@@ -41,7 +41,7 @@ img {
 
 .nameContainer {
   height: 20%;
-  font-family: "Inconsolata", monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   color: rgb(67, 83, 52);
 }
@@ -58,4 +58,8 @@ img {
   color: rgb(130, 148, 96);
   background: transparent;
   font-size: 1.5rem;
+}
+.icon:hover,
+.fa-regular:hover {
+  color: rgb(67, 83, 52);
 }

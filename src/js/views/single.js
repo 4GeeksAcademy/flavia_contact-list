@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/single.css";
 
 export const Single = () => {
   const { actions } = useContext(Context);
@@ -50,20 +51,42 @@ export const Single = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           ></input>
-          <Link to="/" onClick={()=> actions.updateContact(myContact.id, name, email, urlphoto, phone)}>
-          Guardar
+          <Link
+            to="/"
+            onClick={() =>
+              actions.updateContact(myContact.id, name, email, urlphoto, phone)
+            }
+          >
+            Guardar
           </Link>
         </>
       ) : (
-        <>
-          <h1>{myContact.full_name}</h1>
-          <img src={myContact.address} />
-          <p>Email: {myContact.email}</p>
-          <p>Phone: {myContact.phone}</p>
-          <button onClick={() => setEditButton(!editButton)}>Editar</button>
-        </>
+        <div className="singleContainer">
+          <div className="cardContainer">
+            <div className="row1">
+              <div className="col1">
+                <img src={myContact.address} className="imgProfile" />
+              </div>
+              <div className="col2">
+                <h1>{myContact.full_name}</h1>
+                <p>Email: {myContact.email}</p>
+                <p>Phone: {myContact.phone}</p>
+              </div>
+            </div>
+            <div className="row2">
+              <button
+                onClick={() => setEditButton(!editButton)}
+                className="editButton"
+              >
+                Editar
+              </button>
+            </div>
+          </div>
+          <Link to="/" className="backHome">
+            <i class="fa-solid fa-circle-chevron-left"></i> Back to Contacts
+          </Link>
+        </div>
       )}
-      <Link to="/">Back home</Link>
     </>
   );
 };

@@ -1,6 +1,66 @@
-img {
-    object-fit: cover;
-    width: 230px;
-    height: 230px;
-  }
-  
+.singleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
+.cardContainer {
+  width: 35rem;
+  height: 18rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.676);
+  font-family: "Open Sans", sans-serif;
+}
+
+.imgProfile {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border: 2px double rgb(174, 195, 174);
+}
+.row1 {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+.row2 {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col1 {
+  height: 15rem;
+  width: 15rem;
+  padding: 1rem;
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  color: rgb(67, 83, 52);
+}
+.editButton {
+  border: none;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgb(174, 195, 174);
+}
+.editButton:hover {
+  background-color: rgb(97, 130, 100);
+}
+
+.backHome {
+  color: rgb(148, 166, 132);
+  text-decoration: none;
+  padding-left: 3rem;
+  margin-top: 3rem;
+  align-self: self-start;
+}
+.backHome:hover {
+  color: rgb(97, 130, 100);
+}
