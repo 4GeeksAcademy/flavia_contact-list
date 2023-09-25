@@ -12,6 +12,12 @@
   background-color: rgba(255, 255, 255, 0.676);
   font-family: "Open Sans", sans-serif;
 }
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    width: auto;
+    height: auto;
+  }
+}
 
 .imgProfile {
   object-fit: cover;
