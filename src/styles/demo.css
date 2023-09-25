@@ -29,6 +29,9 @@ form {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+input:focus {
+  outline: none;
+}
 .formContainer input {
   border: none;
   border-bottom: 1px solid gray;
