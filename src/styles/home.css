@@ -8,6 +8,26 @@ body {
   overflow-y: auto;
   background-color: transparent;
 }
+@media only screen and (min-width: 1300px) {
+  .container {
+    height: 70rem;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .container {
+    height: 60rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 45rem;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .container {
+    height: 30rem;
+  }
+}
 .contactContainer {
   margin-bottom: 4rem;
   margin-top: 4rem;
