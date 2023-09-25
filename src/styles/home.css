@@ -7,6 +7,27 @@ body {
   height: 25.25rem;
   overflow-y: auto;
   background-color: transparent;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.container::-webkit-scrollbar {
+  width: 8px; /* Cambia el ancho de la barra en navegadores WebKit */
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgb(
+    239,
+    149,
+    149
+  ); /* Cambia el color del 'thumb' (la parte que se arrastra) */
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: rgb(
+    244,
+    238,
+    238
+  ); /* Cambia el color de la pista (el fondo de la barra) */
 }
 @media only screen and (min-width: 1300px) {
   .container {
