@@ -1,0 +1,20 @@
+.navbar {
+  background-color: transparent;
+  margin-bottom: 2rem;
+}
+.fa-address-book {
+  color: rgb(0, 66, 37);
+  margin-left: 1rem;
+}
+.fa-address-book:hover {
+  color: rgba(0, 66, 37, 0.76);
+}
+.btn {
+  background-color: rgb(0, 66, 37);
+  margin-right: 1rem;
+  color: white;
+}
+.btn:hover {
+  background-color: rgba(0, 66, 37, 0.76);
+  color: white;
+}

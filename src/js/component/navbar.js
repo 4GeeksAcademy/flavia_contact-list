@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Contacts</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Add new contact</button>
-				</Link>
-			</div>
-		</nav>
-	);
+  return (
+    <nav className="navbar navbar-light">
+      <Link to="/">
+        <i className="fa-solid fa-address-book fa-2xl"></i>
+      </Link>
+      <div className="ml-auto">
+        <Link to="/demo">
+          <button className="btn">Add new contact</button>
+        </Link>
+      </div>
+    </nav>
+  );
 };
