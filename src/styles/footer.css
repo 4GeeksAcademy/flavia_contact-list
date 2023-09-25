@@ -1,0 +1,12 @@
+.footer {
+  color: rgb(67, 83, 52);
+  font-family: "Open Sans", sans-serif;
+}
+.linkedin {
+  color: rgb(67, 83, 52);
+  font-style: italic;
+  text-decoration: none;
+}
+.linkedin:hover {
+  text-decoration: underline;
+}

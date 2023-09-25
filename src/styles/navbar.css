@@ -1,6 +1,7 @@
 .navbar {
   background-color: transparent;
   margin-bottom: 2rem;
+  font-family: "Open Sans", sans-serif;
 }
 .fa-address-book {
   color: rgb(0, 66, 37);
